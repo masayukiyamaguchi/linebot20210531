@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-/************************ LINE *************************/
+/************************ LINE ************************/
 Route::group(['namespace' => 'Api'], function() {
     // LineからのWebhookを受信
     Route::post('/line/webhook', 'LineWebhookController@webhook')->name('line.webhook');
