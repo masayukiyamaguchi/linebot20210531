@@ -19,6 +19,6 @@ Route::get('/', function () {
 
 /************************ LINE ************************/
 Route::group(['namespace' => 'Api'], function() {
-    // LineからのWebhookを受信
+    // LineからのWebhookを受信用
     Route::post('/line/webhook', 'LineWebhookController@webhook')->name('line.webhook');
 });
