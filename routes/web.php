@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 /************************ LINE *************************/
-// line webhook受取用
-Route::post('line/callback','LineApiController@postWebhook');
 // line メッセージ送信用
 Route::get('line/message/send','LineApiController@sendMessage');
+// line webhook受取用
+Route::post('line/callback','LineApiController@postWebhook');
