@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use Log;
+use App\Http\Controllers\Controller;
 
 class LineApiController extends Controller
 {
