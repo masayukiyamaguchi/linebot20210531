@@ -20,8 +20,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 /************************ LINE *************************/
 
-// line webhook受取用
-Route::post('/line/callback','LineApiController@postWebhook');
+Route::group(['namespace' => 'Api'], function () {
 
-// line メッセージ送信
-Route::get('/line/message/send','LineApiController@sendMessage');
+    // line webhook受取用
+    Route::post('/line/callback','LineApiController@postWebhook');
+    
+    // line メッセージ送信
+    Route::get('/line/message/send','LineApiController@sendMessage');
+
+});
